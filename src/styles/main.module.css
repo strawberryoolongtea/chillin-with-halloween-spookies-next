@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  height: 100vh;
+  background-image: url("/images/spider-pattern.png");
+}
+.container .title-wrapper {
+  width: 100%;
+}
+.container .title-wrapper .title {
+  position: relative;
+  max-width: 768px;
+  width: 100%;
+  aspect-ratio: 2.15730337079 / 1;
+  margin: 0 auto;
+}
+.container .title-wrapper .title img {
+  max-width: 768px;
+  width: 100%;
+}
+.container .title-wrapper .subtitle {
+  color: #fff;
+  text-align: center;
+  font-family: "pretendard", sans-serif;
+}
+.container .btns-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 420px;
+}
+.container .btns-wrapper a {
+  width: 100%;
+}
+.container .btns-wrapper .main-btns {
+  width: 100%;
+  border: none;
+  font-family: "pretendard", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.container .btns-wrapper .btn-red {
+  background-color: #d02600;
+  height: 80px;
+  color: #e3e3e3;
+}
+.container .btns-wrapper .btn-gray {
+  background-color: #e3e3e3;
+  height: 60px;
+  color: #d02600;
+}
+
+@media (max-width: 375px) {
+  .container .title-wrapper .subtitle {
+    font-size: 18px;
+  }
+}

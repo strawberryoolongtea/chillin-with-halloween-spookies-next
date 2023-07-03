@@ -1,0 +1,105 @@
+.mbti_result {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  background-image: url("/images/spider-pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mbti_result .result_description {
+  border: 1px solid #d02600;
+  max-width: 420px;
+  margin: 0 auto 20px;
+  padding: 60px 24px;
+  box-sizing: border-box;
+}
+.mbti_result .result_description .character_name {
+  width: 100%;
+  max-width: 355px;
+  height: 184px;
+  margin: 0 auto;
+}
+.mbti_result .result_description .character_name img {
+  display: block;
+  width: 100%;
+  height: 184px;
+  object-fit: contain;
+}
+.mbti_result .result_description h2 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #d02600;
+  margin: 24px 0;
+}
+.mbti_result .character_script {
+  font-family: "song-myung", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 30px;
+}
+.mbti_result .character_img {
+  width: 100%;
+  max-width: 278px;
+  max-height: 278px;
+  border: 1px solid #d02600;
+  margin: 0 auto;
+}
+.mbti_result .character_img img {
+  width: 100%;
+  object-fit: cover;
+}
+.mbti_result .character_title {
+  margin-bottom: 60px;
+  font-size: 24px;
+  line-height: 36px;
+}
+.mbti_result .character_description {
+  text-align: left;
+  word-break: keep-all;
+  font-size: 18px;
+  line-height: 34px;
+  padding: 20px 0;
+  border-top: 1px solid #d02600;
+  border-bottom: 1px solid #d02600;
+  margin-bottom: 60px;
+}
+.mbti_result .character_hashtag {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+.mbti_result .character_hashtag li {
+  list-style: none;
+  word-break: keep-all;
+  font-size: 18px;
+  line-height: 34px;
+  margin-right: 5px;
+}
+.mbti_result .result_btns {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mbti_result .result_btns button {
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+.mbti_result .result_btns .btn-red {
+  background-color: #d02600;
+  height: 80px;
+  color: #fff;
+}
+.mbti_result .result_btns .btn-gray {
+  background-color: #e3e3e3;
+  height: 60px;
+  color: #d02600;
+}
