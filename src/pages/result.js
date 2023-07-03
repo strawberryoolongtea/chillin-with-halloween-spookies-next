@@ -3,11 +3,12 @@ import Link from "next/link";
 import { results } from "@/data/result";
 import Head from "next/head";
 import styles from "../styles/result.module.css";
+import { useRouter } from "next/router";
 
-export default function Result () {
+export default function Result ({character}) {
   const [isSupportedShare, setIsSupportedShare] = useState();
   const [isSupportedClipboard, setIsSupportedClipboard] = useState();
-  const [character, setCharacter] = useState();
+  // const [character, setCharacter] = useState();
 
   async function mobileShare() {
     await navigator.share({
@@ -34,7 +35,7 @@ export default function Result () {
   useEffect(() => {
     setIsSupportedShare(!!navigator.share);
     setIsSupportedClipboard(!!navigator.clipboard);
-    setCharacter(results.filter(result => result.type === new URLSearchParams(window.location.search).get("type"))[0]);
+    // setCharacter(results.filter(result => result.type === new URLSearchParams(window.location.search).get("type"))[0]);
     window.scrollTo(0, 0);
     (function(d) {
       var config = {
@@ -96,3 +97,11 @@ export default function Result () {
     </Fragment>
   )
 }
+
+export const getServerSideProps = async ({query}) => {
+  // const initialData = await fetcher(GetVideo, { id })(); // 서버 통신 코드 가정
+  const character = results.filter(result => result.type === query.type)[0]
+  return {
+    props: { character },
+  };
+};
