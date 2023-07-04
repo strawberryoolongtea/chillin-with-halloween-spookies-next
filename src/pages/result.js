@@ -54,13 +54,13 @@ export default function Result ({character}) {
         <meta property="og:site_name" content="Chillin With Halloween Spookies" />
         <meta property="og:title" content={character?.ogtitle} />
         <meta property="og:description" content={character?.script} />
-        <meta property="og:image" content={character?.img} />
+        <meta property="og:image" content={character?.ogImg} />
         <meta property="og:url" content="https://www.odd-scythe.com/" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:site" content="Chillin With Halloween Spookies" />
         <meta property="twitter:title" content={character?.ogtitle} />
         <meta property="twitter:description" content={character?.script} />
-        <meta property="twitter:image" content={character?.img} />
+        <meta property="twitter:image" content={character?.ogImg} />
         <meta property="twitter:url" content="https://www.odd-scythe.com/" />
       </Head>
       <div className={styles.mbti_result}>
