@@ -56,13 +56,13 @@ export default function Result ({character}) {
         <meta property="og:title" content={character?.ogtitle} />
         <meta property="og:description" content={character?.ogScript} />
         <meta property="og:image" content={character?.ogImg} />
-        <meta property="og:url" content="https://www.odd-scythe.com/" />
+        <meta property="og:url" content={character?.ogUrl} />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:site" content="Chillin With Halloween Spookies" />
         <meta property="twitter:title" content={character?.ogtitle} />
         <meta property="twitter:description" content={character?.ogScript} />
         <meta property="twitter:image" content={character?.ogImg} />
-        <meta property="twitter:url" content="https://www.odd-scythe.com/" />
+        <meta property="twitter:url" content={character?.ogUrl} />
         <title>Chillin With Halloween Spookies 🤡 내 안에 숨어있는 공포 영화 속 빌런은 누구일까요?</title>
       </Head>
       <div className={styles.mbti_result}>
