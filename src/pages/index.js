@@ -46,6 +46,20 @@ export default function Home() {
   }, [])
   return (
     <Fragment>
+      <Head>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Chillin With Halloween Spookies" />
+        <meta property="og:title" content="Chillin With Halloween Spookies" />
+        <meta property="og:description" content="내 안에 숨어있는 공포 영화 속 빌런을 찾으러 GO" />
+        <meta property="og:image" content="/images/readme/thumbnail.jpg" />
+        <meta property="og:url" content="https://www.odd-scythe.com/" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="Chillin With Halloween Spookies" />
+        <meta property="twitter:title" content="Chillin With Halloween Spookies" />
+        <meta property="twitter:description" content="내 안에 숨어있는 공포 영화 속 빌런을 찾으러 GO" />
+        <meta property="twitter:image" content="/images/readme/thumbnail.jpg" />
+        <meta property="twitter:url" content="https://www.odd-scythe.com/" />
+      </Head>
       <div className="container">
         <div className="title-wrapper">
           <div className="title"><Image src="/images/title.png" alt="chillin with halloween spookies" fill /></div>
