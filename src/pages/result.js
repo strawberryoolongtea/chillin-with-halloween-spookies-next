@@ -29,7 +29,6 @@ export default function Result ({character}) {
       await mobileShare();
     } else if (isSupportedClipboard) {
       await copyToClipboard();
-      return;
     } else {
       const textArea = document.createElement('textarea');
       document.body.appendChild(textArea);
