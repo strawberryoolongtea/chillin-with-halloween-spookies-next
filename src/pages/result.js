@@ -27,10 +27,17 @@ export default function Result ({character}) {
   const handleClickShare = async () => {
     if (isSupportedShare) {
       await mobileShare();
-      return;
-    }
-    if (isSupportedClipboard) {
+    } else if (isSupportedClipboard) {
       await copyToClipboard();
+      return;
+    } else {
+      const textArea = document.createElement('textarea');
+      document.body.appendChild(textArea);
+      textArea.value = window.location.href;
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('링크를 복사했어요!\n공포 영화 속 본캐 빌런이 궁금한 친구들에게\n테스트를 공유해 보세요 :)');
     }
   }
   useEffect(() => {
