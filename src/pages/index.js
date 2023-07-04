@@ -59,6 +59,7 @@ export default function Home() {
         <meta property="twitter:description" content="내 안에 숨어있는 공포 영화 속 빌런을 찾으러 GO" />
         <meta property="twitter:image" content="/images/readme/thumbnail.jpg" />
         <meta property="twitter:url" content="https://www.odd-scythe.com/" />
+        <title>Chillin With Halloween Spookies 🎃 내 안에 숨어있는 공포 영화 속 빌런을 찾으러 GO</title>
       </Head>
       <div className="container">
         <div className="title-wrapper">

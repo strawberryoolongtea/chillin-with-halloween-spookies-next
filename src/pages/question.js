@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { questions } from "@/data/question";
 import styles from "../styles/question.module.css";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Question () {
   const [number, setNumber] = useState(0);
@@ -90,29 +91,42 @@ export default function Question () {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    (function(d) {
+      var config = {
+        kitId: 'ecp2fsx',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
   }, [])
 
   useEffect(() => {
     setQuestion(questions[number]);
   }, [number, count])
   return (
-    <div className={styles.question}>
-      <div className={styles.question_progress}>
-        <span style={{width: `calc((100% / 12) * ${number + 1})`}}></span>
+    <Fragment>
+      <Head>
+        <title>Chillin With Halloween Spookies 👻 내 안에 숨어있는 공포 영화 속 빌런 찾기</title>
+      </Head>
+      <div className={styles.question}>
+        <div className={styles.question_progress}>
+          <span style={{width: `calc((100% / 12) * ${number + 1})`}}></span>
+        </div>
+        <div className={styles.question_wrapper}>
+          <h1 className={styles.question_title}><Image src={question.imgUrl} alt={question.alt} width={70} height={70} /></h1>
+          <h2 className={styles.question_text} dangerouslySetInnerHTML={{__html: question.question}}></h2>
+          <ul className={styles.question_list}>
+            {question.options.map((option) => {
+              return (
+                <li className={styles.question_item} id={option.value} key={option.value}>
+                  <button id={option.value} onClick={handleChangeNumber} dangerouslySetInnerHTML={{__html: option.text}}></button>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
-      <div className={styles.question_wrapper}>
-        <h1 className={styles.question_title}><Image src={question.imgUrl} alt={question.alt} width={70} height={70} /></h1>
-        <h2 className={styles.question_text} dangerouslySetInnerHTML={{__html: question.question}}></h2>
-        <ul className={styles.question_list}>
-          {question.options.map((option) => {
-            return (
-              <li className={styles.question_item} id={option.value} key={option.value}>
-                <button id={option.value} onClick={handleChangeNumber} dangerouslySetInnerHTML={{__html: option.text}}></button>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    </div>
+    </Fragment>
   )
 }

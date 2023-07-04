@@ -16,8 +16,9 @@
 .mbti_result .result_description .character_name {
   width: 100%;
   max-width: 355px;
-  height: 184px;
+  aspect-ratio: 1.92934783 / 1;
   margin: 0 auto;
+  position: relative;
 }
 .mbti_result .result_description .character_name img {
   display: block;
@@ -41,9 +42,10 @@
 .mbti_result .character_img {
   width: 100%;
   max-width: 278px;
-  max-height: 278px;
+  aspect-ratio: 1 / 1;
   border: 1px solid #d02600;
   margin: 0 auto;
+  position: relative;
 }
 .mbti_result .character_img img {
   width: 100%;
@@ -93,12 +95,12 @@
   width: 100%;
   cursor: pointer;
 }
-.mbti_result .result_btns .btn-red {
+.mbti_result .result_btns .btn_red {
   background-color: #d02600;
   height: 80px;
   color: #fff;
 }
-.mbti_result .result_btns .btn-gray {
+.mbti_result .result_btns .btn_gray {
   background-color: #e3e3e3;
   height: 60px;
   color: #d02600;

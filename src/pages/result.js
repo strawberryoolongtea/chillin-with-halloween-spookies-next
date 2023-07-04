@@ -4,6 +4,7 @@ import { results } from "@/data/result";
 import Head from "next/head";
 import styles from "../styles/result.module.css";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Result ({character}) {
   const [isSupportedShare, setIsSupportedShare] = useState();
@@ -62,15 +63,16 @@ export default function Result ({character}) {
         <meta property="twitter:description" content={character?.ogScript} />
         <meta property="twitter:image" content={character?.ogImg} />
         <meta property="twitter:url" content="https://www.odd-scythe.com/" />
+        <title>Chillin With Halloween Spookies 🤡 내 안에 숨어있는 공포 영화 속 빌런은 누구일까요?</title>
       </Head>
       <div className={styles.mbti_result}>
         <section className={styles.result_description}>
           <div className={styles.character_name}>
-            <img src={character?.nameImg} alt={`chillin-with-${character?.name}`} />
+            <Image src={character?.nameImg} alt={`chillin-with-${character?.name}`} fill priority />
           </div>
           <p className={styles.character_script} dangerouslySetInnerHTML={{__html: character?.script}}></p>
           <div className={styles.character_img}>
-            <img src={character?.img} alt={character?.name} />
+            <Image src={character?.img} alt={character?.name} fill priority />
           </div>
           <h2>공포 영화 속에서 당신은...</h2>
           <h1 className={styles.character_title} dangerouslySetInnerHTML={{__html: character?.title}}></h1>
