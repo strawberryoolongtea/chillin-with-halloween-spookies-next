@@ -21,7 +21,7 @@ export default function Result ({character}) {
 
   async function copyToClipboard() {
     await navigator.clipboard.writeText(window.location.href);
-    alert('링크를 복사했어요!\n공포 영화 속 본캐 빌런이 궁금한 친구들에게\n테스트를 공유해 보세요 :)');
+    alert('링크를 복사했어요!\n공포 영화 속 본캐 빌런이 궁금한 친구들에게\n결과를 공유해 보세요 :)');
   }
 
   const handleClickShare = async () => {
@@ -36,13 +36,12 @@ export default function Result ({character}) {
       textArea.select();
       document.execCommand('copy');
       document.body.removeChild(textArea);
-      alert('링크를 복사했어요!\n공포 영화 속 본캐 빌런이 궁금한 친구들에게\n테스트를 공유해 보세요 :)');
+      alert('링크를 복사했어요!\n공포 영화 속 본캐 빌런이 궁금한 친구들에게\n결과를 공유해 보세요 :)');
     }
   }
   useEffect(() => {
     setIsSupportedShare(!!navigator.share);
     setIsSupportedClipboard(!!navigator.clipboard);
-    // setCharacter(results.filter(result => result.type === new URLSearchParams(window.location.search).get("type"))[0]);
     window.scrollTo(0, 0);
     (function(d) {
       var config = {
