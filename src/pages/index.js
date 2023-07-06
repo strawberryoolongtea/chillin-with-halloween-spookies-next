@@ -30,7 +30,8 @@ export default function Home() {
     } else {
       const textArea = document.createElement('textarea');
       document.body.appendChild(textArea);
-      textArea.value = window.location.href;
+      // textArea.value = window.location.href;
+      textArea.value = `kakaotalk://web/openExternal?url='+encodeURIComponent(${window.location.href})`;
       textArea.select();
       document.execCommand('copy');
       document.body.removeChild(textArea);
@@ -38,11 +39,13 @@ export default function Home() {
     }
   }
   useEffect(() => {
-    if (navigator.userAgent.match("KAKAOTALK")) {
-      alert("카카오톡 인앱 브라우저에서는 공유하기 기능을 사용할 수 없습니다.");
-    }
-    setIsSupportedShare(!!navigator.share);
-    setIsSupportedClipboard(!!navigator.clipboard);
+    // if (navigator.userAgent.match("KAKAOTALK")) {
+    //   alert("카카오톡 인앱 브라우저에서는 공유하기 기능을 사용할 수 없습니다.");
+    // }
+    // setIsSupportedShare(!!navigator.share);
+    // setIsSupportedClipboard(!!navigator.clipboard);
+    setIsSupportedShare(false);
+    setIsSupportedClipboard(false);
     window.scrollTo(0, 0);
     (function(d) {
       var config = {
