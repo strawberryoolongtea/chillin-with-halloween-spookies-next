@@ -82,11 +82,11 @@ export default function Home() {
           <Link href="/intro">
             <button className="main-btns btn-red">본캐 찾으러 GO</button>
           </Link>
-          {/* <button className="main-btns btn-gray" onClick={handleClickShare}>주변에 알리기</button> */}
-          {
+          <button className="main-btns btn-gray" onClick={handleClickShare}>주변에 알리기</button>
+          {/* {
             !isSupportedShare && !isSupportedClipboard ? null :
             <button className="main-btns btn-gray" onClick={handleClickShare}>주변에 알리기</button>
-          }
+          } */}
         </div>
       </div>
     </Fragment>
