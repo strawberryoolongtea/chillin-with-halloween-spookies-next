@@ -41,9 +41,9 @@ export default function Home() {
     }
   }
   useEffect(() => {
-    if (navigator.userAgent.match("KAKAOTALK")) {
-      router.push(`kakaotalk://web/openExternal?url=${encodeURIComponent(window.location.href)}`);
-    }
+    // if (navigator.userAgent.match("KAKAOTALK")) {
+    //   router.push(`kakaotalk://web/openExternal?url=${encodeURIComponent(window.location.href)}`);
+    // }
     // if (navigator.userAgent.match("KAKAOTALK")) {
     //   alert("카카오톡 인앱 브라우저에서는 공유하기 기능을 사용할 수 없습니다.");
     // }
