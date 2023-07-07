@@ -41,16 +41,15 @@ export default function Result ({character}) {
   }
 
   const handleClickSave = () => {
-    const PROD_URL = ""
     const anchorElement = document.createElement('a');
     document.body.appendChild(anchorElement);
-    // anchorElement.href = `/images/results/result-0${character.type}.png`;
-    anchorElement.href = `/images/results/result-02.png`;
-    anchorElement.download = `chillin-with-${character.name}.png`;
+    anchorElement.href = `/images/results/chillin-with-michael-myers.pdf`;
+    anchorElement.download = `chillin-with-michael-myers.pdf`;
 
     anchorElement.click();
 
     document.body.removeChild(anchorElement);
+
   }
   useEffect(() => {
     setIsSupportedShare(!!navigator.share);
