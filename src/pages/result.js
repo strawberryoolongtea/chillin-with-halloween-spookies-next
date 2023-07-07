@@ -39,6 +39,19 @@ export default function Result ({character}) {
       alert('링크를 복사했어요!\n공포 영화 속 본캐 빌런이 궁금한 친구들에게\n결과를 공유해 보세요 :)');
     }
   }
+
+  const handleClickSave = () => {
+    const PROD_URL = ""
+    const anchorElement = document.createElement('a');
+    document.body.appendChild(anchorElement);
+    // anchorElement.href = `/images/results/result-0${character.type}.png`;
+    anchorElement.href = `/images/results/result-02.png`;
+    anchorElement.download = `chillin-with-${character.name}.png`;
+
+    anchorElement.click();
+
+    document.body.removeChild(anchorElement);
+  }
   useEffect(() => {
     setIsSupportedShare(!!navigator.share);
     setIsSupportedClipboard(!!navigator.clipboard);
@@ -93,9 +106,19 @@ export default function Result ({character}) {
               )
             })}
           </ul>
+          <h2>팀 사이드가 만드는 호러 매거진 오드 2호를<br /> 소장하고 싶다면?</h2>
+          <div className={styles.tumblebug}>
+            <div className={styles.character_img}>
+              <Image src="/images/cover-mockup.png" alt={character?.name} fill priority />
+            </div>
+            <Link href="https://link.tumblbug.com/LGcIBfuceBb">
+              <button>오드 2호 펀딩하러 GO</button>
+            </Link>
+          </div>
         </section>
         <section className={styles.result_btns}>
           <button className={styles.btn_red} onClick={handleClickShare}>결과 공유하기</button>
+          <button className={styles.btn_red} onClick={handleClickSave}>이미지 저장하기</button>
           <Link href="/">
             <button className={styles.btn_gray}>다시 테스트하기</button>
           </Link>
