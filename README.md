@@ -6,7 +6,7 @@
 
 ## Welcome To The Odd Camp | 오드 산장에 어서오세요
 
-<img src="./public/assets/images/readme/thumbnail.jpg" alt="chillin-with-halloween-spookies" width="100%" />
+<img src="./public/images/readme/thumbnail.jpg" alt="chillin-with-halloween-spookies" width="100%" />
 
 무더운 여름,<br>
 당신은 오래 전 이벤트를 응모했던 모 회사에서 봉투를 하나 전달 받는다.<br>
@@ -30,4 +30,4 @@
 
 <a href="https://www.odd-scythe.com/" target="_blank">본캐 찾으러 GO</a>
 
-<img src="./public/assets/images/readme/1440-main.png" alt="chillin-with-halloween-spookies" width="100%" />
+<img src="./public/images/readme/1440-main.png" alt="chillin-with-halloween-spookies" width="100%" />
