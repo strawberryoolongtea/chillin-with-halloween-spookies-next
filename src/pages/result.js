@@ -9,7 +9,6 @@ import Image from "next/image";
 export default function Result ({character}) {
   const [isSupportedShare, setIsSupportedShare] = useState();
   const [isSupportedClipboard, setIsSupportedClipboard] = useState();
-  // const [character, setCharacter] = useState();
 
   async function mobileShare() {
     await navigator.share({
@@ -43,8 +42,8 @@ export default function Result ({character}) {
   const handleClickSave = () => {
     const anchorElement = document.createElement('a');
     document.body.appendChild(anchorElement);
-    anchorElement.href = `/images/results/chillin-with-michael-myers.pdf`;
-    anchorElement.download = `chillin-with-michael-myers.pdf`;
+    anchorElement.href = `/images/results/chillin-with-${character.name}.png`;
+    anchorElement.download = `chillin-with-${character.name}.png`;
 
     anchorElement.click();
 
@@ -128,7 +127,6 @@ export default function Result ({character}) {
 }
 
 export const getServerSideProps = async ({query}) => {
-  // const initialData = await fetcher(GetVideo, { id })(); // 서버 통신 코드 가정
   const character = results.filter(result => result.type === query.type)[0]
   return {
     props: { character },
